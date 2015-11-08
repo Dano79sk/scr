@@ -25,10 +25,12 @@ MENU 'Grid {\
 SCH:
 Grid Default;
 Change Width 0.006in;
-MENU '[designlink22.png] Search and order {\
-                                          General : Run designlink-order.ulp -general; |\
-                                          Schematic : Run designlink-order.ulp; \
-                                          }'\
+MENU 'PRINT{\
+          A4_PO : Print 3 -1 BLACK SOLID PORTRAIT PAPER A4 FILE /tmp/%N.sch.pdf; |\
+          A4_LS : Print 3 -1 BLACK SOLID LANDSCAPE PAPER A4 FILE /tmp/%N.sch.pdf; |\
+          A3_PO : Print 3 -1 BLACK SOLID PORTRAIT  PAPER A3 FILE /tmp/%N.sch.pdf; |\
+          A3_LS : Print 3 -1 BLACK SOLID LANDSCAPE  PAPER A3 FILE /tmp/%N.sch.pdf; |\
+          }'\
 ;
 
 
