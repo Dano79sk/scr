@@ -1,0 +1,54 @@
+# Configuration Script
+#
+# This file can be used to configure the editor windows.
+#
+# Uncomment this if you want a set of useful default shortcuts!
+#SCRIPT default-assign.scr;
+#
+
+BRD:
+MENU 'Grid {\
+             0.1mm   : Grid mm 0.1; |\
+             0.1inch : Grid inch 0.1; |\
+             On  : Grid On; | \
+             Off : Grid Off;\
+           }'\ 
+     'Top    : Display None Top   	Pads Vias Unrouted Dimension tPlace tOrigins tName tValue tDocu; '\     
+     'Bottom : Display None Bottom 	Pads Vias Unrouted Dimension bPlace bOrigins bName bValue bDocu; '\ 
+     'PRINT_LS : Display None Pads Dimension tPlace tOrigins tName tValue tDocu; Print 3 -1 BLACK SOLID LANDSCAPE PAPER A4 FILE /tmp/%N.top.pdf;Display None Pads Dimension bPlace bOrigins bName bValue bDocu; Print 3 -1 MIRROR BLACK SOLID LANDSCAPE PAPER A4 FILE /tmp/%N.bot.pdf; '\
+     'PRINT_PO : Display None Pads Dimension tPlace tOrigins tName tValue tDocu; Print 3 -1 BLACK SOLID PORTRAIT PAPER A4 FILE /tmp/%N.top.pdf;Display None Pads Dimension bPlace bOrigins bName bValue bDocu; Print 3 -1 MIRROR BLACK SOLID PORTRAIT PAPER A4 FILE /tmp/%N.bot.pdf; '\
+;
+
+
+
+
+SCH:
+Grid Default;
+Change Width 0.006in;
+MENU '[designlink22.png] Search and order {\
+                                          General : Run designlink-order.ulp -general; |\
+                                          Schematic : Run designlink-order.ulp; \
+                                          }'\
+;
+
+
+
+
+
+
+
+LBR:
+MENU '[designlink22.png] Search and order : Run designlink-order.ulp -general;'\
+;
+
+DEV:
+Grid Default;
+
+SYM:
+Grid Default On;
+Change Width 0.010in;
+
+PAC:
+Grid Default On;
+Change Width 0.005in;
+Change Size 0.050in;
