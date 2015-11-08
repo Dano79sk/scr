@@ -1,0 +1,3 @@
+- grid selector 
+- fast top/bootom wiev
+- fast pdf export
